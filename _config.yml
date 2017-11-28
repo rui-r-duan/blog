@@ -23,7 +23,7 @@ github_username:  duanpanda
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-minimal
+theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
 
