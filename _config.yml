@@ -14,18 +14,24 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Melody of Programming
+tagline: A responsive theme for your project on GitHub Pages
 email: duanpanda@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   This site records my thoughts on programming.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+# paginate: 1
+
+# About/contact
 github_username:  duanpanda
+author: Ryan Duan
+name: Ryan Duan
 
 # Build settings
 markdown: kramdown
 theme: jekyll-theme-cayman
 plugins:
-  - jekyll-feed
+  - jekyll-paginate
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

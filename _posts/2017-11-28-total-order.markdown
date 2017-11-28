@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Total Order and Java Comparable"
 date: 2017-11-28 00:09:00 -0500
 categories: java
