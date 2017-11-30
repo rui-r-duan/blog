@@ -6,6 +6,7 @@ categories: java
 ---
 
 ## Problem
+
 ### Comparable.compareTo() specification
 
 We know that we can implement `java.lang.Comparable` interface to make a class comparable by the `sort()` methods in `Collection` or `Arrays` classes.  
@@ -102,9 +103,12 @@ Suppose that a, b, and c refer to objects corresponding to temperatures of 10.16
 - b.compareTo(c) = 0, we can say b ≤ c.
 - But a.compareTo(c) > 0, it implies a > c, which violates Transitivity property of total order.
 
-For this reason, we **must not introduce a fudge factor** when comparing two floating-point numbers **if we want to implement the `Comparable` interface**.
+## Conclusion
+
+For the aforementioned reason, we **must not introduce a fudge factor** when comparing two floating-point numbers **if we want to implement the `Comparable` interface**.
 
 We should always use the total order properties **to verify the correctness** of a `Comparable` implementation.
 
-## How to compare floating-point numbers in Java?
-We should use `Double.compare()` or `Double.compareTo()` to compare doubles, and use `Float.compare()` or `Float.compareTo()` to compare floats.  They consider `NaN`, `0.0f` and `-0.0f`.  The _natural ordering_ imposed by these methods is consistent with _equals_.
+### How to compare floating-point numbers in Java?
+
+The recommended way is to use `Double.compare()` or `Double.compareTo()` to compare doubles, and use `Float.compare()` or `Float.compareTo()` to compare floats.  They consider `NaN`, `0.0f` and `-0.0f`.  The _natural ordering_ imposed by these methods is consistent with _equals_.  To test the equality, use the overrided `equals()` methods, such as `Double.equals()`.  For more details, please read the documentation and the source code of the Java API.
