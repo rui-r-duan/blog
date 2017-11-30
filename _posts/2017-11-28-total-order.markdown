@@ -91,17 +91,17 @@ Actually, however small EPSILON is, we can always find a counterexample to break
 The root cause is that this `compareTo()` implementation violates the **Total Order** requirement in the specification of `compareTo()`.
 
 ### Total Order
-- Antisymmetry: a ≤ b and b ≤ a implies a = b.
-- Transitivity: a ≤ b and b ≤ c implies a ≤ c.
-- Totality: either a ≤ b or b ≤ a.
+- Antisymmetry: `a ≤ b` and `b ≤ a` implies `a = b`.
+- Transitivity: `a ≤ b` and `b ≤ c` implies `a ≤ c`.
+- Totality: either `a ≤ b` or `b ≤ a`.
 
 See [Totally Ordered Set](http://mathworld.wolfram.com/TotallyOrderedSet.html) for a formal mathematical definition.
 
 Suppose that a, b, and c refer to objects corresponding to temperatures of 10.16°, 10.08°, 10.00°, respectively.  Then,
 
-- a.compareTo(b) = 0, we can say a ≤ b.
-- b.compareTo(c) = 0, we can say b ≤ c.
-- But a.compareTo(c) > 0, it implies a > c, which violates Transitivity property of total order.
+- `a.compareTo(b) = 0`, we can say `a ≤ b`.
+- `b.compareTo(c) = 0`, we can say `b ≤ c`.
+- But `a.compareTo(c) > 0`, it implies `a > c`, which violates Transitivity property of total order.
 
 ## Conclusion
 
