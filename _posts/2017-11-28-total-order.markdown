@@ -9,7 +9,7 @@ categories: java
 
 ### Comparable.compareTo() specification
 
-We know that we can implement `java.lang.Comparable` interface to make a class comparable by the `sort()` methods in `Collection` or `Arrays` classes.  
+We know that we can implement `java.lang.Comparable` interface to make a class comparable by the `sort()` methods in `Collections` or `Arrays` classes.  
 
 According to the API specification of `Comparable.compareTo(that)`, it returns a negative integer when `this` is smaller than `that`, or a positive integer when `this` is bigger than `that`, or zero when `this` is equal to `that`.
 
