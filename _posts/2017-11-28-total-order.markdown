@@ -86,7 +86,13 @@ The output becomes "10.00 10.16 10.08"!  What is wrong?  Is EPSILON too large?  
 
 ## Analysis
 
-Actually, however small EPSILON is, we can always find a counterexample to break the code in which the numbers are close enough.
+Actually, however small EPSILON is, we can always find a counterexample to break the code in which the numbers are close enough.  For most cases, you can use `Double.MIN_VALUE` which is the smallest positive nonzero value of type double, as EPSILON, it is the same as .NET `Double.Epsilon`.  However, .NET document gives us this warning:
+
+<pre>
+Double.Epsilon is sometimes used as an absolute measure of the distance between two Double values when testing for equality. However, Double.Epsilon measures the smallest possible value that can be added to, or subtracted from, a Double whose value is zero. For most positive and negative Double values, the value of Double.Epsilon is too small to be detected. Therefore, except for values that are zero, we do not recommend its use in tests for equality.
+</pre>
+
+So the above epsilon approach is not a reliable way to do the compare for sorting.
 
 The root cause is that this `compareTo()` implementation violates the **Total Order** requirement in the specification of `compareTo()`.
 
@@ -112,3 +118,7 @@ We should always use the total order properties **to verify the correctness** of
 ### How to compare floating-point numbers in Java?
 
 The recommended way is to use `Double.compare()` or `Double.compareTo()` to compare doubles, and use `Float.compare()` or `Float.compareTo()` to compare floats.  They consider `NaN`, `0.0f` and `-0.0f`.  The _natural ordering_ imposed by these methods is consistent with _equals_.  To test the equality, use the overrided `equals()` methods, such as `Double.equals()`.  For more details, please read the documentation and the source code of the Java API.
+
+The floating-point maths is complicated and hard.  For more discussions, please refer to [Comparing Floating Point Numbers](https://randomascii.wordpress.com/2012/02/25/comparing-floating-point-numbers-2012-edition/).
+
+Reference: You may be interested in these two methods: `Math.nextAfter(double,double)`, and `Math.ulp(double)`.
