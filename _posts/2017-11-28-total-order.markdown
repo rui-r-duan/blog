@@ -86,7 +86,7 @@ The output becomes "10.00 10.16 10.08"!  What is wrong?  Is EPSILON too large?  
 
 ## Analysis
 
-Actually, however small EPSILON is, we can always find a counterexample to break the code in which the numbers are close enough.  For most cases, you can use `Double.MIN_VALUE` which is the smallest positive nonzero value of type double, as EPSILON, it is the same as .NET `Double.Epsilon`.  However, .NET document gives us this warning:
+Actually, however small EPSILON is, we can always find a counterexample to break the code in which the numbers are close enough.  For most cases, you can use `Double.MIN_VALUE` which is the smallest positive nonzero value of type double, as EPSILON, it is conceptually the same as .NET `Double.Epsilon`.  However, .NET document gives us this warning:
 
 <pre>Double.Epsilon is sometimes used as an absolute measure of the distance
 between two Double values when testing for equality. However, Double.Epsilon
