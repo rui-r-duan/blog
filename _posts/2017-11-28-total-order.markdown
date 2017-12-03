@@ -88,9 +88,12 @@ The output becomes "10.00 10.16 10.08"!  What is wrong?  Is EPSILON too large?  
 
 Actually, however small EPSILON is, we can always find a counterexample to break the code in which the numbers are close enough.  For most cases, you can use `Double.MIN_VALUE` which is the smallest positive nonzero value of type double, as EPSILON, it is the same as .NET `Double.Epsilon`.  However, .NET document gives us this warning:
 
-<pre>
-Double.Epsilon is sometimes used as an absolute measure of the distance between two Double values when testing for equality. However, Double.Epsilon measures the smallest possible value that can be added to, or subtracted from, a Double whose value is zero. For most positive and negative Double values, the value of Double.Epsilon is too small to be detected. Therefore, except for values that are zero, we do not recommend its use in tests for equality.
-</pre>
+<pre>Double.Epsilon is sometimes used as an absolute measure of the distance
+between two Double values when testing for equality. However, Double.Epsilon
+measures the smallest possible value that can be added to, or subtracted from,
+a Double whose value is zero. For most positive and negative Double values, the
+value of Double.Epsilon is too small to be detected. Therefore, except for
+values that are zero, we do not recommend its use in tests for equality.</pre>
 
 So the above epsilon approach is not a reliable way to do the compare for sorting.
 
