@@ -19,7 +19,7 @@ As we know, floating-point math is not exact.  If you compare the following floa
 {% highlight java %}
 if (result == expectedResult)
 {% endhighlight %}
-then it is unlikely that the comparison will be true.  If the comparison is true then it is probably unstable.  See [Comparing floating point numbers](http://www.cygnus-software.com/papers/comparingfloats/Comparing%20floating%20point%20numbers.htm) for a thourough discussion.
+then it is unlikely that the comparison will be true.  If the comparison is true then it is probably unstable.  See [Comparing Floating Point Numbers](https://randomascii.wordpress.com/2012/02/25/comparing-floating-point-numbers-2012-edition/) for a thourough discussion.
 
 Thus we usualy see some code, especially the code written in C langauge, using comparing with epsilon, like this:
 {% highlight java %}
