@@ -1,2 +1,2 @@
-# ruiduan.github.io
+# blog
 My personal Web site.
