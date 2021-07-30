@@ -1,2 +1,2 @@
-# duanpanda.github.io
+# ruiduan.github.io
 My personal Web site.
