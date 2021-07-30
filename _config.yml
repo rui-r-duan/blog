@@ -15,17 +15,17 @@
 # in the templates via {{ site.myvariable }}.
 title: Melody of Programming
 tagline: A responsive theme for your project on GitHub Pages
-email: duanpanda@gmail.com
+email: rui.r.duan@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Ryan Duan\'s thoughts on programming and software engineering.
+  Rui Duan\'s thoughts on programming and software engineering.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # paginate: 1
 
 # About/contact
-github_username:  duanpanda
-author: Ryan Duan
-name: Ryan Duan
+github_username:  rui-r-duan
+author: Rui Duan
+name: Rui Duan
 
 # Build settings
 markdown: kramdown
