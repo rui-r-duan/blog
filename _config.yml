@@ -3,11 +3,11 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Melody of Programming
+title: Melody of Computing
 email: rui.r.duan@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Rui Duan's thoughts on programming and software engineering.
-baseurl: "/blog" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://rui-r-duan.github.io" # the base hostname & protocol for your site
 
 # About/contact
