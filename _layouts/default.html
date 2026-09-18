@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
   </head>
-  <body>
+  <body{% if page.layout == "post" %} class="has-toc"{% endif %}>
     <section class="page-header">
       <h1 class="project-name">{{ page.title | default: site.title }}</h1>
       <h2 class="project-tagline">{{ site.author }}</h2>
