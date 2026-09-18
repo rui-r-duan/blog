@@ -7,7 +7,6 @@
    <missing-glyph horiz-adv-x="2048" d="M 0,0 L 2047,0 2047,2047 0,2047 0,0 Z"/>
    <glyph unicode="’" horiz-adv-x="202" d="M 328,1264 C 328,1194 322,1135 309,1088 296,1040 277,995 250,952 L 127,952 C 190,1043 221,1129 221,1212 L 133,1212 133,1409 328,1409 328,1264 Z"/>
    <glyph unicode="y" horiz-adv-x="1012" d="M 191,-425 C 142,-425 100,-421 67,-414 L 67,-279 C 92,-283 120,-285 151,-285 263,-285 352,-203 417,-38 L 434,5 5,1082 197,1082 425,484 C 428,475 432,464 437,451 442,438 457,394 482,320 507,246 521,205 523,196 L 593,393 830,1082 1020,1082 604,0 C 559,-115 518,-201 479,-258 440,-314 398,-356 351,-384 304,-411 250,-425 191,-425 Z"/>
-   <glyph unicode="w" horiz-adv-x="1481" d="M 1174,0 L 965,0 776,765 740,934 C 734,904 725,861 712,805 699,748 631,480 508,0 L 300,0 -3,1082 175,1082 358,347 C 363,331 377,265 401,149 L 418,223 644,1082 837,1082 1026,339 1072,149 1103,288 1308,1082 1484,1082 1174,0 Z"/>
    <glyph unicode="v" horiz-adv-x="1007" d="M 613,0 L 400,0 7,1082 199,1082 437,378 C 446,351 469,272 506,141 L 541,258 580,376 826,1082 1017,1082 613,0 Z"/>
    <glyph unicode="u" horiz-adv-x="867" d="M 314,1082 L 314,396 C 314,325 321,269 335,230 349,191 371,162 402,145 433,128 478,119 537,119 624,119 692,149 742,208 792,267 817,350 817,455 L 817,1082 997,1082 997,231 C 997,105 999,28 1003,0 L 833,0 C 832,3 832,12 831,27 830,42 830,59 829,78 828,97 826,132 825,185 L 822,185 C 781,110 733,58 679,27 624,-4 557,-20 476,-20 357,-20 271,10 216,69 161,128 133,225 133,361 L 133,1082 314,1082 Z"/>
    <glyph unicode="t" horiz-adv-x="523" d="M 554,8 C 495,-8 434,-16 372,-16 228,-16 156,66 156,229 L 156,951 31,951 31,1082 163,1082 216,1324 336,1324 336,1082 536,1082 536,951 336,951 336,268 C 336,216 345,180 362,159 379,138 408,127 450,127 474,127 509,132 554,141 L 554,8 Z"/>
@@ -139,7 +138,7 @@
   <g class="TextShape">
    <g id="id4">
     <rect class="BoundingBox" stroke="none" fill="none" x="6089" y="7072" width="6912" height="963"/>
-    <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="6339" y="7773"><tspan font-family="Liberation Sans, sans-serif" font-size="635px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">LLM: Hello, what’s up?</tspan></tspan></tspan></text>
+    <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="6339" y="7773"><tspan font-family="Liberation Sans, sans-serif" font-size="635px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">LLM: Hello.</tspan></tspan></tspan></text>
    </g>
   </g>
   <g class="TextShape">
@@ -548,7 +547,7 @@
   <g class="TextShape">
    <g id="id18">
     <rect class="BoundingBox" stroke="none" fill="none" x="26489" y="7087" width="6912" height="963"/>
-    <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="26739" y="7788"><tspan font-family="Liberation Sans, sans-serif" font-size="635px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">LLM: Hello, what’s up?</tspan></tspan></tspan></text>
+    <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="26739" y="7788"><tspan font-family="Liberation Sans, sans-serif" font-size="635px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">LLM: Hello.</tspan></tspan></tspan></text>
    </g>
   </g>
   <g class="TextShape">
