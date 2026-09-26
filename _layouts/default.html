@@ -5,23 +5,56 @@
 
 {% seo %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#157878">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <meta name="theme-color" content="#0f1b2d">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Schibsted+Grotesk:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
   </head>
-  <body{% if page.layout == "post" %} class="has-toc"{% endif %}>
-    <section class="page-header">
-      <h1 class="project-name">{{ page.title | default: site.title }}</h1>
-      <h2 class="project-tagline">{{ site.author }}</h2>
-    </section>
+  <body class="layout-{{ page.layout | default: 'page' }}{% if page.layout == "post" %} has-toc{% endif %}">
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <section class="main-content">
+    <header class="masthead">
+      <div class="staff" aria-hidden="true"></div>
+
+      <div class="masthead-bar">
+        <a class="site-name" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        <nav class="site-nav" aria-label="Site">
+          <a href="{{ '/' | relative_url }}"{% if page.layout == "home" %} aria-current="page"{% endif %}>Writing</a>
+          <a href="{{ '/about/' | relative_url }}"{% if page.url == "/about/" %} aria-current="page"{% endif %}>About</a>
+          <a class="fsf-badge" href="https://www.fsf.org/" title="Free Software Foundation member since July 2023">
+            <img src="{{ '/images/fsf_member.png' | relative_url }}" width="180" height="45" alt="Free Software Foundation member since July 2023">
+          </a>
+        </nav>
+      </div>
+
+      <div class="masthead-title">
+        {% if page.layout == "home" %}
+          <h1 class="display">{{ site.title }}</h1>
+          <p class="lede">{{ site.description }}</p>
+        {% elsif page.layout == "post" %}
+          <h1 class="display">{{ page.title }}</h1>
+          <p class="meta">
+            <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+            {% for c in page.categories %}<span class="tag">{{ c }}</span>{% endfor %}
+          </p>
+        {% else %}
+          <h1 class="display">{{ page.title | default: site.title }}</h1>
+        {% endif %}
+      </div>
+    </header>
+
+    <main class="main-content" id="main">
       {{ content }}
+    </main>
 
-      <footer class="site-footer">
-	<span class="site-footer-owner">{{ site.author }} &#60;{{ site.email }}&#62;</span>
-      </footer>
-    </section>
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>{{ site.author }}</span>
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        <a href="https://github.com/{{ site.github_username }}">GitHub</a>
+      </div>
+    </footer>
   </body>
 </html>

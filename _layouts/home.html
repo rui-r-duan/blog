@@ -2,17 +2,24 @@
 layout: default
 ---
 <div class="home">
- 
+
   {{ content }}
 
-  <ul class="post-list">
+  <ol class="post-list" reversed>
     {% for post in site.posts %}
-      <li>
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
+      <li class="post-item">
+        <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %Y" }}</time>
+        <div class="post-summary">
+          <h2 class="post-title">
+            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          </h2>
+          <p class="post-excerpt">{{ post.excerpt | strip_html | normalize_whitespace | truncatewords: 42 }}</p>
+          {% if post.categories.size > 0 %}
+            <p class="post-tags">{% for c in post.categories %}<span class="tag">{{ c }}</span>{% endfor %}</p>
+          {% endif %}
+        </div>
       </li>
     {% endfor %}
-  </ul>
+  </ol>
 
 </div>

@@ -16,8 +16,8 @@ author: Rui Duan
 name: Rui Duan
 
 # Build settings
-# The Cayman theme's stylesheets are vendored in _sass/ (see _sass/cayman.scss),
-# so no theme gem is needed.
+# The site theme lives in _sass/melody.scss (normalize and rouge-github
+# are vendored alongside it), so no theme gem is needed.
 markdown: kramdown
 plugins:
   - jekyll-seo-tag
